@@ -4,6 +4,8 @@ import BorderGlow from './components/BorderGlow';
 import LightPillar from './components/LightPillar';
 import GradientText from './components/GradientText';
 
+import SpecularButton from './components/SpecularButton';
+
 const projects = [
   {
     id: 'cold-spray',
@@ -87,23 +89,32 @@ function ProjectPage() {
   if (!project) return <div>Project not found</div>;
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#09090b', padding: '4rem 2rem' }}>
-      <button 
-        onClick={() => navigate('/')} 
-        style={{ 
-          background: 'none', 
-          border: '1px solid rgba(255,255,255,0.2)', 
-          color: 'white', 
-          padding: '0.5rem 1rem', 
-          borderRadius: '8px', 
-          cursor: 'pointer',
-          marginBottom: '2rem'
-        }}
-      >
-        &larr; Back to Portfolio
-      </button>
+    <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#09090b', padding: '4rem 2rem', position: 'relative', overflowX: 'hidden' }}>
+      <div style={{ position: 'absolute', top: '2rem', left: '2rem' }}>
+        <SpecularButton
+          size="md"
+          radius={18}
+          tint="#ebe9e9"
+          tintOpacity={0}
+          blur={0}
+          textColor="#f5f5f5"
+          lineColor="#e94a07"
+          baseColor="#525252"
+          intensity={1}
+          shineSize={10}
+          shineFade={40}
+          thickness={2.8}
+          speed={0.35}
+          followMouse
+          proximity={250}
+          autoAnimate={false}
+          onClick={() => navigate('/')}
+        >
+          &larr; Back to Portfolio
+        </SpecularButton>
+      </div>
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
         <GradientText
           colors={["#eb6302","#e00a28","#f1c808"]}
           animationSpeed={3}
