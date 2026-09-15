@@ -54,12 +54,12 @@ function Home() {
         </header>
 
         <div className="projects-grid">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Link key={project.id} to={`/project/${project.id}`} className="project-card">
               <BorderGlow
                 edgeSensitivity={30}
                 glowColor="30 100 50"
-                backgroundColor="rgba(0, 0, 0, 0.7)"
+                backgroundColor="transparent"
                 borderRadius={28}
                 glowRadius={40}
                 glowIntensity={1.0}
@@ -69,8 +69,7 @@ function Home() {
                 className="w-full h-full flex"
               >
                 <div className="project-content">
-                  <h2>{project.title}</h2>
-                  <p>{project.description}</p>
+                  <h2>Project {index + 1}</h2>
                 </div>
               </BorderGlow>
             </Link>
