@@ -26,13 +26,13 @@ function App() {
     <>
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', backgroundColor: '#09090b' }}>
         <LightPillar
-          topColor="#FFCC00"
-          bottomColor="#FF4500"
+          topColor="#88210c"
+          bottomColor="#ff9200"
           intensity={1.0}
-          rotationSpeed={0.3}
+          rotationSpeed={0.4}
           glowAmount={0.005}
           pillarWidth={3.0}
-          pillarHeight={0.4}
+          pillarHeight={0.5}
           noiseIntensity={0.5}
           pillarRotation={0}
           interactive={false}
