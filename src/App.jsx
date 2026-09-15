@@ -66,7 +66,7 @@ function Home() {
                 coneSpread={25}
                 animated={true}
                 colors={['#ff7b00', '#ffb700', '#ff3300']}
-                className="w-full h-full flex"
+                style={{ width: '100%', height: '100%', display: 'flex' }}
               >
                 <div className="project-content">
                   <h2>Project {index + 1}</h2>

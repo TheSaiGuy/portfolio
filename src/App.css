@@ -36,10 +36,10 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  height: 200px; /* Fixed height so they all match */
-  flex: 1; /* Allow them to stretch evenly */
+  height: 130px; /* Vertically smaller */
+  flex: 1; /* Stretch horizontally to fill the grid */
   display: flex;
-  min-width: 0; /* Prevent flex items from overflowing */
+  min-width: 0;
 }
 
 .project-content {
