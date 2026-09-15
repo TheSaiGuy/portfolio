@@ -30,11 +30,11 @@ function App() {
           bottomColor="#ff9200"
           intensity={1.0}
           rotationSpeed={0.4}
-          glowAmount={0.005}
+          glowAmount={0.002}
           pillarWidth={3.0}
           pillarHeight={0.5}
           noiseIntensity={0.5}
-          pillarRotation={0}
+          pillarRotation={43}
           interactive={false}
           mixBlendMode="normal"
         />
