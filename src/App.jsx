@@ -15,7 +15,7 @@ const projects = [
   },
   {
     id: 'pca-cfd',
-    title: 'Parametric Cycle Analysis & CFD Nozzle Design',
+    title: 'Engines & Nozzles',
     description: 'Thermodynamic analysis script and plug nozzle design for a jet engine.',
   },
   {
