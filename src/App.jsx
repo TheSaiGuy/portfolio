@@ -101,7 +101,7 @@ function ProjectPage() {
 
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
         <GradientText
-          colors={["#e75809","#000000","#e75809"]}
+          colors={["#ebad0f", "#2b89cb", "#000000"]}
           animationSpeed={3}
           showBorder={false}
           className="project-title-gradient"
