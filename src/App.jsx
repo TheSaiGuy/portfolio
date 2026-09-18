@@ -4,7 +4,8 @@ import BorderGlow from './components/BorderGlow';
 import LightPillar from './components/LightPillar';
 import GradientText from './components/GradientText';
 
-import SpecularButton from './components/SpecularButton';
+import { LiquidMetalButton } from './shaders/liquid-metal-button/LiquidMetalButton';
+import './shaders/threeui.css';
 
 const projects = [
   {
@@ -90,27 +91,11 @@ function ProjectPage() {
   return (
     <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#09090b', padding: '4rem 2rem', position: 'relative', overflowX: 'hidden' }}>
       <div style={{ position: 'absolute', top: '2rem', left: '2rem' }}>
-        <SpecularButton
-          size="md"
-          radius={18}
-          tint="#ebe9e9"
-          tintOpacity={0}
-          blur={0}
-          textColor="#f5f5f5"
-          lineColor="#e94a07"
-          baseColor="#525252"
-          intensity={1}
-          shineSize={10}
-          shineFade={40}
-          thickness={2.8}
-          speed={0.35}
-          followMouse
-          proximity={250}
-          autoAnimate={false}
+        <LiquidMetalButton
+          variant="pill"
+          text="Back to Portfolio"
           onClick={() => navigate('/')}
-        >
-          &larr; Back to Portfolio
-        </SpecularButton>
+        />
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
