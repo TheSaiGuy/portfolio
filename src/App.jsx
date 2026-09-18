@@ -35,8 +35,8 @@ function Home() {
     <>
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', backgroundColor: '#09090b' }}>
         <LightPillar
-          topColor="#88210c"
-          bottomColor="#ff9200"
+          topColor="#ebad0f"
+          bottomColor="#2b89cb"
           intensity={1.0}
           rotationSpeed={0.4}
           glowAmount={0.002}
@@ -46,6 +46,7 @@ function Home() {
           pillarRotation={43}
           interactive={false}
           mixBlendMode="normal"
+          quality="medium"
         />
       </div>
       <div className="portfolio-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -60,7 +61,7 @@ function Home() {
               <BorderGlow
                 edgeSensitivity={30}
                 glowColor="30 100 50"
-                backgroundColor="transparent"
+                backgroundColor="#000000"
                 borderRadius={28}
                 glowRadius={40}
                 glowIntensity={1.0}
