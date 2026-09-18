@@ -252,7 +252,7 @@ export function LiquidMetalButton({
               ? "Interactive liquid metal play button"
               : "Interactive liquid metal button"}
           srcDoc={source}
-          sandbox="allow-scripts"
+          sandbox="allow-scripts allow-same-origin"
           loading="eager"
           onLoad={() => {
             setReady(true);
