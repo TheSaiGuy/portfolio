@@ -104,6 +104,7 @@ function ProjectPage() {
           colors={["#ebad0f", "#2b89cb", "#000000"]}
           animationSpeed={3}
           showBorder={false}
+          yoyo={false}
           className="project-title-gradient"
         >
           <h1 style={{ fontSize: '3rem', margin: 0, textAlign: 'center' }}>{project.title}</h1>
