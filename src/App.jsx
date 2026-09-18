@@ -89,12 +89,11 @@ function ProjectPage() {
   if (!project) return <div>Project not found</div>;
 
   return (
-    <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#0e0f12', padding: '4rem 2rem', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#000', padding: '4rem 2rem', position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', top: '-65px', left: '-65px', width: '360px', height: '230px', zIndex: 10 }}>
         <LiquidMetalButton
           variant="pill"
           text="Home"
-          embedded={true}
           onClick={() => navigate('/')}
         />
       </div>
