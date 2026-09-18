@@ -52,10 +52,8 @@
   height: 100%;
   width: 100%;
   border-radius: 28px;
-  /* Solid black background */
-  background: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: border-color 0.3s ease;
+  /* Transparent background to let BorderGlow show through */
+  background: transparent;
 }
 
 .project-content h2 {
@@ -68,8 +66,6 @@
 
 /* Hover effects */
 .project-card:hover .project-content {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .project-card:hover .project-content h2 {
