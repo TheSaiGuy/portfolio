@@ -89,18 +89,19 @@ function ProjectPage() {
   if (!project) return <div>Project not found</div>;
 
   return (
-    <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#09090b', padding: '4rem 2rem', position: 'relative', overflowX: 'hidden' }}>
-      <div style={{ position: 'absolute', top: '2rem', left: '2rem' }}>
+    <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#0e0f12', padding: '4rem 2rem', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', top: '-65px', left: '-65px', width: '360px', height: '230px', zIndex: 10 }}>
         <LiquidMetalButton
           variant="pill"
-          text="Back to Portfolio"
+          text="Home"
+          embedded={true}
           onClick={() => navigate('/')}
         />
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
         <GradientText
-          colors={["#eb6302","#e00a28","#f1c808"]}
+          colors={["#e75809","#000000","#e75809"]}
           animationSpeed={3}
           showBorder={false}
           className="project-title-gradient"
