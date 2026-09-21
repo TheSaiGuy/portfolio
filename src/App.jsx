@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import LightPillar from './components/LightPillar';
 import BorderGlow from './components/BorderGlow';
@@ -34,6 +35,58 @@ const projects = [
 ];
 
 function Home() {
+  const [activeSection, setActiveSection] = useState('about');
+  const [orbStyle, setOrbStyle] = useState({ left: 0, width: 0, opacity: 0 });
+  
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const refs = { about: aboutRef, projects: projectsRef, contact: contactRef };
+
+  const sections = ['about', 'projects', 'contact'];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = 'about';
+      // Find the last section whose top is at or above the middle of the viewport
+      for (const sec of sections) {
+        const element = document.getElementById(sec);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 3) {
+            current = sec;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger once on mount
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const activeEl = refs[activeSection]?.current;
+    if (activeEl) {
+      // Add a small padding to the orb width
+      setOrbStyle({
+        left: activeEl.offsetLeft - 16,
+        width: activeEl.offsetWidth + 32,
+        opacity: 1
+      });
+    }
+  }, [activeSection]);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', backgroundColor: '#09090b' }}>
@@ -54,9 +107,10 @@ function Home() {
       </div>
 
       <nav className="glass-navbar">
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div className="nav-orb" style={orbStyle} />
+        <a ref={aboutRef} href="#about" onClick={(e) => scrollToSection(e, 'about')} className={activeSection === 'about' ? 'active' : ''}>About Me</a>
+        <a ref={projectsRef} href="#projects" onClick={(e) => scrollToSection(e, 'projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
+        <a ref={contactRef} href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
       </nav>
 
       <div className="portfolio-container" style={{ position: 'relative', zIndex: 1 }}>

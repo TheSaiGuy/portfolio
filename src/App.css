@@ -29,10 +29,29 @@
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .glass-navbar a:hover {
   color: #ebad0f;
+}
+
+.glass-navbar a.active {
+  color: #fff; /* White since it's above the glowing orb */
+}
+
+.nav-orb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 75%;
+  border-radius: 50px;
+  background: rgba(235, 173, 15, 0.2);
+  border: 1px solid rgba(235, 173, 15, 0.4);
+  box-shadow: 0 0 15px rgba(235, 173, 15, 0.3);
+  z-index: 0;
+  transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
 }
 
 /* Sections */
