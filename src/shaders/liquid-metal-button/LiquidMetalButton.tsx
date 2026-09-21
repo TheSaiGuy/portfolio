@@ -254,6 +254,8 @@ export function LiquidMetalButton({
           srcDoc={source}
           sandbox="allow-scripts allow-same-origin"
           loading="eager"
+          allowTransparency={true}
+          style={{ background: 'transparent', colorScheme: 'dark' }}
           onLoad={() => {
             setReady(true);
             syncButtonConfig();

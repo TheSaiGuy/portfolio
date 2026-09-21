@@ -89,17 +89,17 @@ function Home() {
 
   return (
     <>
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', backgroundColor: '#09090b' }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
         <LightPillar
           topColor="#ebad0f"
           bottomColor="#2b89cb"
           intensity={1.0}
-          rotationSpeed={0.4}
-          glowAmount={0.002}
+          rotationSpeed={0.3}
+          glowAmount={0.005}
           pillarWidth={3.0}
-          pillarHeight={0.5}
-          noiseIntensity={0.5}
-          pillarRotation={43}
+          pillarHeight={0.4}
+          noiseIntensity={0.3}
+          pillarRotation={0}
           interactive={false}
           mixBlendMode="normal"
           quality="medium"
@@ -197,7 +197,7 @@ function ProjectPage() {
 
   return (
     <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: '#000', padding: '4rem 2rem', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', top: '-65px', left: '-65px', width: '360px', height: '230px', zIndex: 10 }}>
+      <div style={{ position: 'absolute', top: '-65px', left: '-65px', width: '360px', height: '230px', zIndex: 10, WebkitTapHighlightColor: 'transparent' }}>
         <LiquidMetalButton
           variant="pill"
           text="Home"
