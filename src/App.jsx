@@ -74,13 +74,13 @@ function Home() {
             </div>
             <div className="hero-image-placeholder">
               <ProfileCard
-                name="Saipranav T."
-                title="Mechanical Engineer"
+                name=""
+                title=""
                 handle="saipranav"
                 status="Open to Work"
                 contactText="Email Me"
                 avatarUrl={profileImg}
-                showUserInfo={true}
+                showUserInfo={false}
                 enableTilt={true}
                 enableMobileTilt={false}
                 onContactClick={() => window.open('mailto:test@example.com')}
