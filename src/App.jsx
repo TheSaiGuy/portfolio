@@ -89,19 +89,20 @@ function Home() {
 
   return (
     <>
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', backgroundColor: '#09090b' }}>
         <LightPillar
-          topColor="#FFCC00"
-          bottomColor="#FF4500"
+          topColor="#ebad0f"
+          bottomColor="#2b89cb"
           intensity={1.0}
-          rotationSpeed={0.3}
-          glowAmount={0.005}
+          rotationSpeed={0.4}
+          glowAmount={0.002}
           pillarWidth={3.0}
-          pillarHeight={0.4}
+          pillarHeight={0.5}
           noiseIntensity={0.5}
-          pillarRotation={0}
+          pillarRotation={43}
           interactive={false}
           mixBlendMode="normal"
+          quality="medium"
         />
       </div>
 
