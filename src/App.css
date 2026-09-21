@@ -47,9 +47,12 @@
   transform: translateY(-50%);
   height: 75%;
   border-radius: 50px;
-  background: rgba(235, 173, 15, 0.2);
-  border: 1px solid rgba(235, 173, 15, 0.4);
-  box-shadow: 0 0 15px rgba(235, 173, 15, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), inset 0 -1px 2px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(235, 173, 15, 0.4);
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
   z-index: 0;
   transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
 }
@@ -122,12 +125,12 @@
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 0 0px rgba(235, 173, 15, 0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover,
@@ -196,4 +199,9 @@
 
 .project-card:hover .project-content h2 {
   color: #ffffff;
+}
+
+.liquid-metal-button, .liquid-metal-button__frame {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
