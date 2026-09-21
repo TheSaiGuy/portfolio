@@ -1,10 +1,11 @@
 import { HashRouter as Router, Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
-import './App.css';
-import BorderGlow from './components/BorderGlow';
 import LightPillar from './components/LightPillar';
+import BorderGlow from './components/BorderGlow';
 import GradientText from './components/GradientText';
-
 import { LiquidMetalButton } from './shaders/liquid-metal-button/LiquidMetalButton';
+import ProfileCard from './components/ProfileCard';
+import profileImg from './assets/profile.png';
+import './App.css';
 import './shaders/threeui.css';
 
 const projects = [
@@ -72,7 +73,19 @@ function Home() {
               </div>
             </div>
             <div className="hero-image-placeholder">
-              {/* Right side open for image later */}
+              <ProfileCard
+                name="Saipranav T."
+                title="Mechanical Engineer"
+                handle="saipranav"
+                status="Open to Work"
+                contactText="Email Me"
+                avatarUrl={profileImg}
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false}
+                onContactClick={() => window.open('mailto:test@example.com')}
+                behindGlowEnabled={true}
+              />
             </div>
           </div>
         </section>
