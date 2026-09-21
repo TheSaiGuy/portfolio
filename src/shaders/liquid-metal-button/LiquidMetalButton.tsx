@@ -228,7 +228,14 @@ export function LiquidMetalButton({
     const receiveMessage = (event: MessageEvent) => {
       if (event.source !== frameRef.current?.contentWindow) return;
       if (event.data?.liquidMetalButton?.type !== "activate") return;
-      onClick();
+      if (frameRef.current) {
+        frameRef.current.style.opacity = '0';
+        frameRef.current.style.transition = 'none';
+      }
+      // Small delay to allow the opacity to apply before unmount
+      setTimeout(() => {
+        onClick();
+      }, 10);
     };
     window.addEventListener("message", receiveMessage);
     return () => window.removeEventListener("message", receiveMessage);

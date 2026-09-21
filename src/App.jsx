@@ -89,7 +89,7 @@ function Home() {
 
   return (
     <>
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
         <LightPillar
           topColor="#ebad0f"
           bottomColor="#2b89cb"
