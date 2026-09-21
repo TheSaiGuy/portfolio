@@ -49,34 +49,67 @@ function Home() {
           quality="medium"
         />
       </div>
-      <div className="portfolio-container" style={{ position: 'relative', zIndex: 1 }}>
-        <header className="hero">
-          <h1>Sai's Engineering Portfolio</h1>
-          <p>Mechanical Engineering & Propulsion Systems</p>
-        </header>
 
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <Link key={project.id} to={`/project/${project.id}`} className="project-card">
-              <BorderGlow
-                edgeSensitivity={30}
-                glowColor="30 100 50"
-                backgroundColor="#000000"
-                borderRadius={28}
-                glowRadius={40}
-                glowIntensity={1.0}
-                coneSpread={25}
-                animated={true}
-                colors={['#ff7b00', '#ffb700', '#ff3300']}
-                style={{ width: '100%', height: '100%', display: 'flex' }}
-              >
-                <div className="project-content">
-                  <h2>Project {index + 1}</h2>
-                </div>
-              </BorderGlow>
-            </Link>
-          ))}
-        </div>
+      <nav className="glass-navbar">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div className="portfolio-container" style={{ position: 'relative', zIndex: 1 }}>
+        
+        {/* About Me Section */}
+        <section id="about" className="section-container">
+          <div className="hero-content">
+            <div className="hero-text">
+              <p className="hero-greeting">Hi I am</p>
+              <h1>Saipranav<br/>Telidevarapalli</h1>
+              <h2 className="hero-subtitle">Mechanical Engineering & Propulsion Systems</h2>
+              
+              <div className="hero-buttons">
+                <button className="btn-primary">LinkedIn</button>
+                <button className="btn-secondary">Resume</button>
+              </div>
+            </div>
+            <div className="hero-image-placeholder">
+              {/* Right side open for image later */}
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="section-container">
+          <h2 className="section-title">Projects</h2>
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <Link key={project.id} to={`/project/${project.id}`} className="project-card">
+                <BorderGlow
+                  edgeSensitivity={30}
+                  glowColor="30 100 50"
+                  backgroundColor="#000000"
+                  borderRadius={28}
+                  glowRadius={40}
+                  glowIntensity={1.0}
+                  coneSpread={25}
+                  animated={true}
+                  colors={['#ff7b00', '#ffb700', '#ff3300']}
+                  style={{ width: '100%', height: '100%', display: 'flex' }}
+                >
+                  <div className="project-content">
+                    <h2>Project {index + 1}</h2>
+                  </div>
+                </BorderGlow>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="section-container">
+          <h2 className="section-title">Contact</h2>
+          {/* Placeholder for future contact form/info */}
+        </section>
+
       </div>
     </>
   );
