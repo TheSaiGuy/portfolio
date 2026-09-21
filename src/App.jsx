@@ -4,6 +4,7 @@ import BorderGlow from './components/BorderGlow';
 import GradientText from './components/GradientText';
 import { LiquidMetalButton } from './shaders/liquid-metal-button/LiquidMetalButton';
 import ProfileCard from './components/ProfileCard';
+import LineSidebar from './components/LineSidebar';
 import profileImg from './assets/profile.png';
 import './App.css';
 import './shaders/threeui.css';
@@ -142,6 +143,29 @@ function ProjectPage() {
           variant="pill"
           text="Home"
           onClick={() => navigate('/')}
+        />
+      </div>
+
+      <div style={{ position: 'fixed', left: '120px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}>
+        <LineSidebar
+          items={['Overview', 'Components', 'Animations', 'Backgrounds', 'Showcase']}
+          accentColor="#ebad0f"
+          textColor="#c4c4c4"
+          markerColor="#6c6c6c"
+          showIndex={true}
+          showMarker={true}
+          proximityRadius={100}
+          maxShift={30}
+          falloff="smooth"
+          markerLength={60}
+          markerGap={0}
+          tickScale={0.5}
+          scaleTick={true}
+          itemGap={20}
+          fontSize={1.1}
+          smoothing={100}
+          defaultActive={0}
+          onItemClick={(index, label) => console.log(index, label)}
         />
       </div>
 
