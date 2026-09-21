@@ -95,39 +95,28 @@
   margin-top: 2rem;
 }
 
-.btn-primary {
-  padding: 0.8rem 2.5rem;
-  background: #ebad0f;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background: #fbc63b;
-}
-
+.btn-primary,
 .btn-secondary {
   padding: 0.8rem 2.5rem;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 0 0px rgba(235, 173, 15, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
+.btn-primary:hover,
 .btn-secondary:hover {
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.5);
+  border-color: rgba(235, 173, 15, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(235, 173, 15, 0.5);
 }
 
 .hero-image-placeholder {
