@@ -6,6 +6,7 @@ import { LiquidMetalButton } from './shaders/liquid-metal-button/LiquidMetalButt
 import ProfileCard from './components/ProfileCard';
 import LineSidebar from './components/LineSidebar';
 import profileImg from './assets/profile.png';
+import resumePdf from './assets/SaiResumeSep2026_Gen_.pdf';
 import './App.css';
 import './shaders/threeui.css';
 
@@ -69,8 +70,12 @@ function Home() {
               <h2 className="hero-subtitle">Aerospace Engineering</h2>
               
               <div className="hero-buttons">
-                <button className="btn-primary">LinkedIn</button>
-                <button className="btn-secondary">Resume</button>
+                <a href="https://www.linkedin.com/in/sai-telidevarapalli" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration: 'none' }}>
+                  LinkedIn
+                </a>
+                <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none' }}>
+                  Resume
+                </a>
               </div>
             </div>
             <div className="hero-image-placeholder">
