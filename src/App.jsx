@@ -146,7 +146,7 @@ function ProjectPage() {
         />
       </div>
 
-      <div style={{ position: 'fixed', left: '120px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}>
+      <div style={{ position: 'fixed', left: '80px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}>
         <LineSidebar
           items={['Overview', 'Components', 'Animations', 'Backgrounds', 'Showcase']}
           accentColor="#ebad0f"
