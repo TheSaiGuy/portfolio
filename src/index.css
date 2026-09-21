@@ -11,7 +11,7 @@ html {
 
   color-scheme: dark;
   color: #ffffff;
-  background-color: transparent;
+  background-color: #09090b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,7 +31,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: transparent;
+  background-color: #09090b;
 }
 
 h1 {
