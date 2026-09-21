@@ -65,7 +65,7 @@ function Home() {
             <div className="hero-text">
               <p className="hero-greeting">Hi I am</p>
               <h1>Saipranav<br/>Telidevarapalli</h1>
-              <h2 className="hero-subtitle">Mechanical Engineering & Propulsion Systems</h2>
+              <h2 className="hero-subtitle">Aerospace Engineering</h2>
               
               <div className="hero-buttons">
                 <button className="btn-primary">LinkedIn</button>

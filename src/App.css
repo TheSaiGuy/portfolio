@@ -122,7 +122,7 @@
 .hero-image-placeholder {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   min-height: 400px;
 }
